@@ -1,0 +1,233 @@
+/* Lalitha Sahasra — Portfolio (plain HTML & CSS) */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #fdfcf7;
+  color: #333333;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* ---------- Navigation ---------- */
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: #3a2a44;
+  padding: 16px 20px;
+  text-align: center;
+}
+
+nav a {
+  display: inline-block;
+  margin: 4px 12px;
+  color: #f5f0fa;
+  font-size: 15px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+nav a:hover {
+  color: #f0d94e;
+}
+
+/* ---------- Shared section layout ---------- */
+.section,
+.home {
+  width: 90%;
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 44px;
+  border: 3px solid #333333;
+  border-radius: 28px;
+  scroll-margin-top: 96px;
+}
+
+.section h2 {
+  display: inline-block;
+  margin: 0 0 28px;
+  padding-bottom: 4px;
+  font-size: 34px;
+  border-bottom: 5px solid;
+}
+
+.section p {
+  font-size: 17px;
+  margin: 0 0 16px;
+}
+
+/* ---------- Home ---------- */
+.home {
+  background: #e3d3ec;
+  padding: 64px 48px;
+}
+
+.home-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.home-text {
+  flex: 1;
+}
+
+.welcome {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  margin: 0;
+}
+
+.home h1 {
+  font-size: 56px;
+  line-height: 1.2;
+  margin: 12px 0;
+}
+
+.home h2 {
+  font-size: 20px;
+  font-weight: bold;
+  opacity: 0.8;
+  margin: 20px 0;
+}
+
+.tagline {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.profile-pic {
+  width: 224px;
+  height: 224px;
+  border: 6px solid #333333;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ---------- Section colors ---------- */
+.about       { background: #f6e3e0; }
+.about h2    { border-color: #c05a4e; }
+
+.skills      { background: #e2f0e8; }
+.skills h2   { border-color: #4e8a6a; }
+.skills .card { background: #cde6d8; border-color: #4e8a6a; }
+
+.projects      { background: #e0e8f2; }
+.projects h2   { border-color: #4a6a9e; }
+.projects .card { background: #c7d6ec; border-color: #4a6a9e; }
+
+.education      { background: #f2ecd4; }
+.education h2   { border-color: #b3973a; }
+.education .card { background: #f7f2df; border-color: #b3973a; }
+
+.achievements      { background: #eeddf0; }
+.achievements h2   { border-color: #8a4a96; }
+.achievements .card { background: #dfc4e6; border-color: #8a4a96; }
+
+.creative      { background: #f2e4d4; }
+.creative h2   { border-color: #b37a3a; }
+.creative .card { background: #ecd4b8; border-color: #b37a3a; }
+
+.goals      { background: #e2e9f2; }
+.goals h2   { border-color: #4a6a9e; }
+
+/* ---------- Cards & grids ---------- */
+.card {
+  background: #ffffff;
+  border: 2px solid #333333;
+  border-radius: 18px;
+  padding: 24px;
+  margin-bottom: 20px;
+}
+
+.card h3 {
+  font-size: 20px;
+  margin: 0 0 8px;
+}
+
+.card p:last-child,
+.card ul:last-child {
+  margin-bottom: 0;
+}
+
+.card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.grid.two   { grid-template-columns: 1fr 1fr; }
+.grid.three { grid-template-columns: 1fr 1fr 1fr; }
+
+.grid .card {
+  margin-bottom: 0;
+}
+
+.num {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* ---------- Images ---------- */
+.project-img {
+  width: 100%;
+  border: 2px solid #4a6a9e;
+  border-radius: 14px;
+  margin-top: 12px;
+}
+
+.cert-grid {
+  margin-top: 24px;
+}
+
+.cert-grid img {
+  width: 100%;
+  max-height: 640px;
+  object-fit: contain;
+  border: 2px solid #8a4a96;
+  border-radius: 18px;
+  margin: 0 auto;
+}
+
+.artwork-img {
+  width: 100%;
+  border: 2px solid #b37a3a;
+  border-radius: 18px;
+  margin-top: 24px;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .section,
+  .home {
+    padding: 24px;
+  }
+
+  .home-inner {
+    flex-direction: column-reverse;
+  }
+
+  .home h1 {
+    font-size: 40px;
+  }
+
+  .grid.two,
+  .grid.three {
+    grid-template-columns: 1fr;
+  }
+}
